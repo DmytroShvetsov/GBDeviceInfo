@@ -23,8 +23,6 @@ s.static_framework = true
   s.subspec 'Jailbreak' do |ss|
     ss.platform = :ios
     ss.ios.dependency 'GBJailbreakDetection'
-ss.vendored_frameworks       = 'GBJailbreakDetection.framework'
-  ss.preserve_paths            = 'GBJailbreakDetection.framework'
 
     ss.pod_target_xcconfig       = { 'EXCLUDED_ARCHS[sdk=iphonesimulator*]' => 'arm64' }
     ss.user_target_xcconfig      = { 'EXCLUDED_ARCHS[sdk=iphonesimulator*]' => 'arm64' }
