@@ -22,7 +22,7 @@ Pod::Spec.new do |s|
 
   s.subspec 'Jailbreak' do |ss|
     ss.platform = :ios
-    ss.ios.dependency 'GBJailbreakDetection', '~> 1.3', :git => 'https://github.com/DmytroShvetsov/GBJailbreakDetection.git'
+    ss.ios.dependency 'GBJailbreakDetectionYYY'
 
     ss.pod_target_xcconfig       = { 'EXCLUDED_ARCHS[sdk=iphonesimulator*]' => 'arm64' }
     ss.user_target_xcconfig      = { 'EXCLUDED_ARCHS[sdk=iphonesimulator*]' => 'arm64' }
