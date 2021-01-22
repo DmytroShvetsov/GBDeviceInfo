@@ -25,7 +25,7 @@ Pod::Spec.new do |s|
     ss.ios.dependency 'GBJailbreakDetection'
 ss.vendored_frameworks       = 'GBJailbreakDetection.framework'
   ss.preserve_paths            = 'GBJailbreakDetection.framework'
-
+ss.static_framework = true
     ss.pod_target_xcconfig       = { 'EXCLUDED_ARCHS[sdk=iphonesimulator*]' => 'arm64' }
     ss.user_target_xcconfig      = { 'EXCLUDED_ARCHS[sdk=iphonesimulator*]' => 'arm64' }
   end
