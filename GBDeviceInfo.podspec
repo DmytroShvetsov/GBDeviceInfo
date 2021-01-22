@@ -10,7 +10,7 @@ Pod::Spec.new do |s|
   s.ios.deployment_target     = '6.0'
   s.osx.deployment_target     = '10.10'
   s.default_subspec           = 'Core'
-
+s.static_framework = true
   s.subspec 'Core' do |ss|
     ss.ios.source_files          = 'GBDeviceInfo/*_iOS.{h,m}', 'GBDeviceInfo/*_Common.{h,m}', 'GBDeviceInfo/GBDeviceInfo.h', 'GBDeviceInfo/GBDeviceInfoInterface.h', 'GBDeviceInfo/GBDeviceInfo_Subclass.h'
     ss.ios.public_header_files   = 'GBDeviceInfo/*_iOS.h', 'GBDeviceInfo/*_Common.h', 'GBDeviceInfo/GBDeviceInfo.h', 'GBDeviceInfo/GBDeviceInfoInterface.h', 'GBDeviceInfo/GBDeviceInfo_Subclass.h'
@@ -25,7 +25,7 @@ Pod::Spec.new do |s|
     ss.ios.dependency 'GBJailbreakDetection'
 ss.vendored_frameworks       = 'GBJailbreakDetection.framework'
   ss.preserve_paths            = 'GBJailbreakDetection.framework'
-ss.static_framework = true
+
     ss.pod_target_xcconfig       = { 'EXCLUDED_ARCHS[sdk=iphonesimulator*]' => 'arm64' }
     ss.user_target_xcconfig      = { 'EXCLUDED_ARCHS[sdk=iphonesimulator*]' => 'arm64' }
   end
